@@ -17,18 +17,91 @@ body {
     background-color: var(--white);
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* ============================================== */
 #area-tabela {
     width: 70%;
     margin-inline: auto;
-    margin-top: 10px;
-    border-top: 1px solid var(--black);
+    margin-top: 4vh;
 }
 
 .table {
-    border-color: #17161a;
+    border-color: var(--black);
+    border-top: 2px solid var(--black);
 }
 
-.table caption {
+#titulo-tabela {
     display: flex;
     flex-direction: row;
-} 
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+#titulo-tabela h4 {
+    font-size: 20px;
+    margin: 0;
+    font-weight: 600;
+}
+
+#novoAluno {
+    padding-inline: 40px;
+}
+
+.btn-outline-primary {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+.btn-outline-primary:hover, .btn-primary, .btn-primary:focus {
+    color: var(--white);
+    background-color: var(--primary);
+    border: var(--primary);
+    outline: none !important;
+}
+.btn-outline-primary:active, .btn-primary:hover {
+    background-color: #b71450 !important;
+}
+
+/* ======================================== */
+#modalAlunoLabel {
+    color: var(--black);
+}
+
+#modalAluno {
+    margin-top: 8vh;
+}
+
+.row {
+    margin-top: 10px;
+}
+input, select {
+    outline: none;
+    padding: 5px 10px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    transition: .5s;
+}
+.meuInput:focus {
+    border-color: var(--primary);
+}
+.form-label {
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.col:nth-child(1) {
+    margin-right: 10px;
+}
+
+select option:focus {
+    background-color: var(--primary);
+}

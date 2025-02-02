@@ -94,8 +94,55 @@ cursos[3].alunoAtual = alunos.filter(aluno => aluno.curso === cursos[3].nome).le
 
 
 const table = document.querySelector('#tabela_alunos');
+const selectCursos = document.querySelector('#cursos'); 
 
 alunos.map(aluno => {
+    inserirAluno(aluno);
+});
+
+cursos.map(curso => {
+    let novaOpcao = document.createElement('option');
+
+    novaOpcao.value = curso.id;
+    novaOpcao.textContent = curso.nome;
+
+    selectCursos.appendChild(novaOpcao);
+});
+
+function novoAluno () {
+    
+    console.log(selectCursos.value === "none");
+
+    if(nomeAluno.value.trim() === "" || selectCursos.value === "none" || turno.value === "none") {
+      alert('Você precisa preencher todos os dados do formulário!');
+    }else {
+        const periodo_selecionado = periodo.value;
+        const anoIngresso = new Date().getFullYear() - (parseInt(periodo_selecionado)-1);
+        const cursoIndex = cursos.findIndex(curso => curso.id === selectCursos.value);
+        const vagaAluno = "0" + (cursos[cursoIndex].alunoAtual+1)
+        
+        const aluno = {
+          "matricula": anoIngresso + cursos[cursoIndex].id + vagaAluno,
+          "nome": nomeAluno.value,
+          "curso": cursos.filter(curso => curso.id === selectCursos.value)[0].nome,
+          "turno": turno.value,
+          "periodo": periodo_selecionado + "º"
+        };
+
+        cursos[cursoIndex].alunoAtual++;
+
+        alunos.push(aluno);
+        inserirAluno(aluno);
+
+        // ======================= //
+        periodo.value = 1;
+        nomeAluno.value = "";
+        selectCursos.value = "none";
+        turno.value = "none";
+    }
+}
+
+function inserirAluno (aluno) {
     let linha = table.insertRow(-1);
     let coluna1 = linha.insertCell(0);
     let coluna2 = linha.insertCell(1);
@@ -108,4 +155,4 @@ alunos.map(aluno => {
     coluna3.textContent = aluno.curso;
     coluna4.textContent = aluno.turno;
     coluna5.textContent = aluno.periodo;
-})
+}
