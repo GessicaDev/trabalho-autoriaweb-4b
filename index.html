@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Alunos | Autoria Web</title>
+    <link rel="shortcut icon" href="src/assets/cadastro.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/headerFooter.css">
+    <script src="src/scripts/iniciar.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Alunos</h1>
+        <nav>
+            <a href="">Início</a>
+            <a href="">Desenvolvedores</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="area-tabela"> 
+            <table id="tabela_alunos" class="table table-hover">
+                <caption>List of users</caption>
+                <thead>
+                    <tr>
+                        <th>Matrícula</th>
+                        <th>Nome</th>
+                        <th>Curso</th>
+                        <th>Turno</th>
+                        <th>Período</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>20240101</td>
+                        <td>João Silva</td>
+                        <td>Refrigeração</td>
+                        <td>Matutino</td>
+                        <td>2º</td>
+                    </tr>
+                </tbody>
+                <!-- Os demais dados são inseridos no javascript "src/scripts/iniciar.js" -->
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <div id="esquerda">
+            <p>IFRN <em style="color: inherit;">campus</em> Santa Cruz</p>
+            <p>Trabalho de Autoria Web</p>
+            <p>Prof. Marcelo Figueiredo Barbosa Júnior</p>
+            <p>Kellyson Ricardo e Maria Géssica - Info3v</p>
+            <p>Referências: 
+                <a href="https://fonts.google.com/specimen/Poppins">Google Fonts</a>
+            </p>
+        </div>
+        <div id="direita">
+            <img src="src/assets/cadastro_vbranco.png" alt="Logo - CadAlunos" title="Creditos: Freepik">
+        </div>
+    </footer>
+</body>
+</html>
