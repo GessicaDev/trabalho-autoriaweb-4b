@@ -1,0 +1,83 @@
+@import url('./main.css');
+
+.area-desenvolvedores {
+    width: 80%;
+    margin-inline: auto;
+    margin-block: 5vh;
+}
+.titulo {
+    border-bottom: 2px solid var(--black);
+}
+
+.titulo h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.devs {
+    width: 90%;
+    margin-inline: auto;
+    margin-top: 4vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.card {
+    box-shadow: 0px 14px 39px 0px rgba(0,0,0,0.1);
+}
+
+.container {
+    border: 1px solid var(--black);
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 2c0px;
+}
+
+.nome {
+    font-weight: 500;
+}
+.descricao {
+    text-align: justify;
+}
+
+.foto {
+    width: 200px;
+    height: 200px;
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: center; 
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+#foto-kellyson {
+    width: 220px;
+}
+#foto-gessica {
+    width: 300px;
+    background-size: 140%;
+}
+
+.area-texto {
+    margin-left: 20px;
+}
+
+.area-texto .nome {
+    font-weight: 600;
+}
+
+.btn-outline-primary {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-outline-primary i {
+    margin-left: 5px;
+}
