@@ -33,6 +33,15 @@ body::-webkit-scrollbar {
     border-top: 2px solid var(--black);
 }
 
+thead {
+    cursor: pointer;
+}
+
+.destaque {
+    font-style: italic;
+    text-decoration: underline;
+}
+
 #titulo-tabela {
     display: flex;
     flex-direction: row;
